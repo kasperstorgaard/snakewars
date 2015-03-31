@@ -17,6 +17,10 @@ module.exports = function($scope, $interval){
     }, snake.positions);
   });
 
+  var resetCanvas = function(canvas, context){
+    context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+  }
+
   var draw = function(canvas, context){
     var canvasBoxSize = gridItemSize(elementSize(canvas), $scope.columns, $scope.rows);
     var drawSnakeOnCanvas = drawSnake(context, canvasBoxSize);
@@ -25,12 +29,12 @@ module.exports = function($scope, $interval){
 
   //--------- kickoff ---------//
   var kickoff = function(canvas) {
-    canvas = canvas;
-    context = canvas.getContext('2d');
+    var context = canvas.getContext('2d');
 
     //TODO: rewrite to use Date.now compare or better implementation
     $interval(function(){
       requestAnimationFrame(function(){
+        resetCanvas(canvas, context);
         draw(canvas, context);
       });
     }, $scope.tickDurationMs);

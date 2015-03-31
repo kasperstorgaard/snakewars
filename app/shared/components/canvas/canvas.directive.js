@@ -1,5 +1,6 @@
 require('./canvas.controller.js');
 require('./canvas.tpl.html');
+require('./canvas.less');
 
 const R = require('ramda');
 

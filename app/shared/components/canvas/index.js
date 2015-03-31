@@ -1,4 +1,5 @@
 const angular = require('angular');
+require('./canvas.less');
 
 module.exports = angular
   .module('snakewars.shared.components.canvas', [])
