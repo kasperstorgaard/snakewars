@@ -1,21 +1,22 @@
 {
-  "name": "ng-fn-webpack-seed",
+  "name": "snakewars",
   "version": "0.1.0",
-  "homepage": "https://github.com/kasperstorgaard/barkometer",
+  "homepage": "https://github.com/kasperstorgaard/snakewars",
   "authors": [
     "kasperstorgaard <kst@codehouse.com>"
   ],
-  "description": "An Angular seed with functional programming utilities and webpack",
+  "description": "multiplayer snake game in angular",
   "main": "js/app.js",
   "moduleType": [
     "globals"
   ],
   "keywords": [
+    "snakewars",
+    "snake",
+    "wars",
+    "game",
     "angular",
-    "webpack",
-    "functional",
-    "programming",
-    "ramda"
+    "webpack"
   ],
   "license": "MIT",
   "ignore": [

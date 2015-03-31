@@ -1,6 +1,6 @@
-#ng-fn-webpack-seed
+#snakewars
 
-An Angular seed with functional programming utilities and webpack
+Multiplayer snake game in angular
 
 Install:
 - (if on Windows): install Python 2.7.9
