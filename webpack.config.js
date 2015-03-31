@@ -33,7 +33,7 @@ module.exports = {
     loaders: [
       { test: /\.html$/, loaders: ['ng-cache-loader'] },
       { test: /\.coffee$/, loaders: ['coffee-loader'] },
-      { test: /app\/.*\.js$/, loaders: ['ng-annotate']},
+      { test: /app\/.*\.js$/, loaders: ['babel-loader', 'ng-annotate']},
       { test: /\.less$/, loaders: ['style-loader','css-loader','less-loader'] },
       { test: /\.css$/, loaders: ['style-loader','css-loader'] },
       { test: /\.(png|jpg)$/, loaders: ['url-loader?limit=8192'] },

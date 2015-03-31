@@ -1,21 +1,11 @@
-var angular = require('angular');
+const angular = require('angular');
 
 require('./home.html');
 
-var app = angular
+module.exports = angular
   .module('snakewars.pages.home', [
-    require('angular-ui-router')
+    require('angular-ui-router'),
+    require('../../shared/components/canvas').name
   ])
-  .controller('HomeController', function($scope){
-    $scope.test = 'home-test';
-  })
-  .config(function($stateProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'home.html',
-        controller: 'HomeController'
-      });
-  });
-
-module.exports = app;
+  .controller('HomeController', require('./home.controller.js'))
+  .config(require('./home.routes.js'));
